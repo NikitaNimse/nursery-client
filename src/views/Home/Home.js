@@ -10,7 +10,7 @@ function Home() {
 
 
     const LoadPlants =  async ()=>{
-        const response = await axios.get('http://localhost:8000/plants')
+        const response = await axios.get('https://nursery-server-agye.onrender.com/plants')
         setplants(response.data.data) 
       }
 
