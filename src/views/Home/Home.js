@@ -10,7 +10,7 @@ function Home() {
 
 
     const LoadPlants =  async ()=>{
-        const response = await axios.get('https://nursery-server-agye.onrender.com/plants')
+        const response = await axios.get(`${process.env.React_APP_API_URL}/plants`)
         setplants(response.data.data) 
       }
 
