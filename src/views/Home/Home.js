@@ -2,6 +2,8 @@ import'./Home.css'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Plantcard from '../../components/PlantCard/Plantcard';
+import { Link } from 'react-router-dom';
+import Imgadd from './Add.png'
 
 function Home() {
 
@@ -39,10 +41,16 @@ function Home() {
           image={image}
           price={price}
           description={description}
-          />)
+         LoadPlants ={LoadPlants}
+         />
+        )
         })
            
      }
+     <Link to="/add">
+     <img src={Imgadd} className='add-btn' alt="add"/>
+     </Link>
+
     </div>
   )
 }
