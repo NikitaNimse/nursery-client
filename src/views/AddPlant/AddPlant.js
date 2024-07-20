@@ -13,6 +13,9 @@ function AddPlant() {
   const [image,setImage] = useState("")
   const [description,setDescription] = useState("")
 
+
+  
+
   const addplant = async()=>{
 
     toast.loading("Adding plant...")

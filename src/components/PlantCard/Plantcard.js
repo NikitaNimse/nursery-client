@@ -2,6 +2,7 @@ import axios from 'axios'
 import "./PlantCard.css"
 import React from 'react'
 import toast, {Toaster} from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 
 function Plantcard({_id,name,category,image,price,description,LoadPlants}) {
 
@@ -15,8 +16,6 @@ function Plantcard({_id,name,category,image,price,description,LoadPlants}) {
 }
 
 
- 
-
   return (
     <div className="plant-card">
         <h1 className="plant-title">{name} </h1>
@@ -25,13 +24,13 @@ function Plantcard({_id,name,category,image,price,description,LoadPlants}) {
          <p>{description}</p>
          <p> category:  {category}</p>
          <div>
+
+         <Link to={`/update/${_id}`}>
          <button 
          type="button" 
          className="action-button"
-         onClick={()=>{
-          updateplant((_id))
-          }} > 
-          Update</button>
+         > Update</button>
+          </Link>
 
          <button 
          type="button" 
