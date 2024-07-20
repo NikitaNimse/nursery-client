@@ -29,9 +29,7 @@ function UpdatePlant() {
 
   }
 
-
-
-  const loadplant =async (id) =>{
+const loadplant =async (id) =>{
 
     if(!id){
       return
